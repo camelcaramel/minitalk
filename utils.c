@@ -6,7 +6,7 @@
 /*   By: donghwik <donghwik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:24:09 by donghwik          #+#    #+#             */
-/*   Updated: 2021/08/27 21:27:43 by donghwik         ###   ########.fr       */
+/*   Updated: 2021/08/27 21:32:03 by donghwik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	num;
 
-	num = (n < 0) ? (-1) * (n) : (n);
+	if (n < 0)
+		num = (-1) * (n);
+	else
+		num = n;
 	if (n < 0)
 		write(fd, &"-", 1);
 	write_num(num, fd);
@@ -31,7 +34,7 @@ void	ft_putnbr_fd(int n, int fd)
 
 size_t	ft_strlen(const char *s)
 {
-	const char *temp;
+	const char	*temp;
 
 	temp = s;
 	while (*temp)
