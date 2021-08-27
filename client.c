@@ -6,7 +6,7 @@
 /*   By: donghwik <donghwik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:18:00 by donghwik          #+#    #+#             */
-/*   Updated: 2021/08/25 17:04:54 by donghwik         ###   ########.fr       */
+/*   Updated: 2021/08/27 20:48:29 by donghwik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int			send_bit(pid_t pid, char c)
 		ret = kill(pid, SIGUSR1);
 	else
 		ret = kill(pid, SIGUSR2);
-	usleep(1000);
+	usleep(300);
 	return (ret + 1);
 }
 
