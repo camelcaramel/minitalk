@@ -6,11 +6,11 @@
 /*   By: donghwik <donghwik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:24:09 by donghwik          #+#    #+#             */
-/*   Updated: 2021/08/25 16:57:55 by donghwik         ###   ########.fr       */
+/*   Updated: 2021/08/27 21:27:43 by donghwik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "minitalk.h"
+#include "minitalk.h"
 
 static void	write_num(unsigned int num, int fd)
 {
@@ -19,7 +19,7 @@ static void	write_num(unsigned int num, int fd)
 	write(fd, &"0123456789"[num % 10], 1);
 }
 
-void		ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	num;
 
@@ -39,7 +39,7 @@ size_t	ft_strlen(const char *s)
 	return (temp - s);
 }
 
-void		ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
 }

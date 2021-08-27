@@ -6,13 +6,11 @@
 /*   By: donghwik <donghwik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:16:41 by donghwik          #+#    #+#             */
-/*   Updated: 2021/08/27 21:05:05 by donghwik         ###   ########.fr       */
+/*   Updated: 2021/08/27 21:25:39 by donghwik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "minitalk.h"
-
-#include <stdio.h>
+#include "minitalk.h"
 
 void	get_bit(int signal)
 {
@@ -45,7 +43,7 @@ void	get_bit(int signal)
 int		main(void)
 {
 	pid_t	pid;
-	
+
 	pid = getpid();
 	ft_putnbr_fd((int)pid, 1);
 	ft_putstr_fd(" <= server pid\n", 1);

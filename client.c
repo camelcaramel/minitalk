@@ -6,13 +6,13 @@
 /*   By: donghwik <donghwik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:18:00 by donghwik          #+#    #+#             */
-/*   Updated: 2021/08/27 20:48:29 by donghwik         ###   ########.fr       */
+/*   Updated: 2021/08/27 21:26:07 by donghwik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int			send_bit(pid_t pid, char c)
+int	send_bit(pid_t pid, char c)
 {
 	int		ret;
 
@@ -24,7 +24,7 @@ int			send_bit(pid_t pid, char c)
 	return (ret + 1);
 }
 
-int			send_char(pid_t pid, char c)
+int	send_char(pid_t pid, char c)
 {
 	int		radix;
 
@@ -35,7 +35,7 @@ int			send_char(pid_t pid, char c)
 	return (1);
 }
 
-int			send_message(pid_t pid, char *msg)
+int	send_message(pid_t pid, char *msg)
 {
 	while (*msg >= 32 && *msg <= 126)
 		if (!send_char(pid, *msg++))
@@ -43,7 +43,7 @@ int			send_message(pid_t pid, char *msg)
 	return (send_char(pid, 127));
 }
 
-int			main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int		pid;
 
