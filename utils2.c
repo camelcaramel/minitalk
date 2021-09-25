@@ -6,7 +6,7 @@
 /*   By: donghwik <donghwik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 15:42:54 by donghwik          #+#    #+#             */
-/*   Updated: 2021/08/27 21:33:51 by donghwik         ###   ########.fr       */
+/*   Updated: 2021/09/25 15:31:37 by donghwik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 
 	sp = str;
 	ret = 0;
-	neg = 0;
+	neg = 1;
 	while (is_space(*sp))
 		sp++;
 	if (*sp == '-')
